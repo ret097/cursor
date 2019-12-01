@@ -1,13 +1,13 @@
 public class Average {
     public static void main(String[] args) {
-        int[] rarre = {4, 5, 7, 22, 18};
+        int[] array = {4, 5, 7, 22, 18};
         float summa = 0f;
         float average;
 
-        for (int i : rarre) {
+        for (int i : array) {
             summa += i;
         }
-        average = summa / rarre.length;
+        average = summa / array.length;
         System.out.println(average);
     }
 }
