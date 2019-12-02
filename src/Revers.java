@@ -7,5 +7,4 @@ public class Revers {
         Arrays.sort(array, Collections.reverseOrder());
         System.out.println(Arrays.toString(array));
     }
-
 }

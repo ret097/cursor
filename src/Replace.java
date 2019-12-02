@@ -10,8 +10,6 @@ public class Replace {
                 }
             }
         }
-
         System.out.println(Arrays.toString(array));
-
     }
 }
