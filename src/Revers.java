@@ -3,9 +3,9 @@ import java.util.Collections;
 
 public class Revers {
     public static void main(String[] args) {
-        Integer[] arr = {2, 3, 1, 7, 11};
-        Arrays.sort(arr, Collections.reverseOrder());
-        System.out.println(Arrays.toString(arr));
+        Integer[] array = {2, 3, 1, 7, 11};
+        Arrays.sort(array, Collections.reverseOrder());
+        System.out.println(Arrays.toString(array));
     }
 
 }
