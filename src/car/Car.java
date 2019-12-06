@@ -5,7 +5,6 @@ public class Car {
     private double time;
     private boolean motor;
 
-
     public void run() {
         if (!isMotorOn()) {
             setMotorOn(true);
@@ -13,7 +12,7 @@ public class Car {
         }
     }
 
-    public void shutDonn() {
+    public void shutDown() {
         if (isMotorOn()) {
             setMotorOn(false);
             System.out.println("Motor is off");
@@ -21,8 +20,7 @@ public class Car {
     }
 
     public double getDistance() {
-        double distance = getSpeed() * getTime();
-        return distance;
+        return getSpeed() * getTime();
     }
 
     public double getTime() {

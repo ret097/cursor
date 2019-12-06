@@ -9,13 +9,12 @@ public class Circle {
         count++;
     }
 
-    public double getArea() {
+    public double calculateArea() {
 
-        return Math.pow(radius,2)* Math.PI;
+        return Math.pow(radius, 2) * Math.PI;
     }
 
     public static int getCount() {
         return count;
     }
-
 }

@@ -6,12 +6,9 @@ public class OnTheWay {
         car.run();
         car.setSpeed(69);
         car.setTime(25.15);
-        car.shutDonn();
+        car.shutDown();
         System.out.println("This car is imaginary and traveled "
                 + car.getDistance()
                 + " km in space");
-
     }
-
-
 }
