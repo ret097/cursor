@@ -1,7 +1,5 @@
 package vertex;
 
-import vertex.Vertex;
-
 public class Vertex3D extends Vertex {
 
     private double x;
@@ -12,6 +10,17 @@ public class Vertex3D extends Vertex {
         this.x = x;
         this.y = y;
         this.z = z;
+    }
+
+    @Override
+    public String toString() {
+        return "["
+                + getX()
+                + ";"
+                + getY()
+                + ";"
+                + getZ()
+                + "] ";
     }
 
     public double getX() {

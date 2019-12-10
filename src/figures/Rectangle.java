@@ -6,31 +6,43 @@ import vertex.Vertex2D;
 
 public class Rectangle extends PlaneShape {
 
-    double weight;
+    Vertex vertex;
+
+    double width;
     double height;
 
-    public Rectangle(double weight, double height, double x, double y) {
-        Vertex vertex2D = new Vertex2D(x, y);
-        this.weight = weight;
+    public Rectangle(double width, double height, double x, double y) {
+        vertex = new Vertex2D(x, y);
+        this.width = width;
         this.height = height;
     }
 
     @Override
+    public String toString() {
+        return super.toString()
+                + "perimeter: "
+                + Math.floor(getPerimeter())
+                + " area: "
+                + Math.floor(getArea())
+                + " vertexXY: "
+                + vertex.toString();
+    }
+
+    @Override
     public double getArea() {
-        return getWeight() * getHeight();
+        return getWidth() * getHeight();
     }
 
     @Override
     public double getPerimeter() {
-        return (getHeight() + getWeight() * 2);
+        return (getHeight() + getWidth() * 2);
     }
 
-    public double getWeight() {
-        return weight;
+    public double getWidth() {
+        return width;
     }
 
     public double getHeight() {
         return height;
     }
 }
-

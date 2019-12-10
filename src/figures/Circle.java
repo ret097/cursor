@@ -5,11 +5,23 @@ import vertex.Vertex2D;
 
 public class Circle extends PlaneShape {
 
+    Vertex2D vertex;
     private double radius;
 
     public Circle(double radius, double x, double y) {
-        Vertex2D vertex = new Vertex2D(x, y);
+        vertex = new Vertex2D(x, y);
         this.radius = radius;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "perimeter: "
+                + Math.floor(getPerimeter())
+                + " area: "
+                + Math.floor(getArea())
+                + " vertexXY: "
+                + vertex.toString();
     }
 
     @Override

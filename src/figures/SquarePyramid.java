@@ -6,13 +6,25 @@ import vertex.Vertex3D;
 
 public class SquarePyramid extends SpaceShape {
 
+    Vertex vertex;
     double height;
     double width;
 
     public SquarePyramid(double height, double width, double x, double y, double z) {
-        Vertex vertex3D = new Vertex3D(x, y, z);
+        vertex = new Vertex3D(x, y, z);
         this.height = height;
         this.width = width;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "volume: "
+                + Math.floor(getVolume())
+                + " area: "
+                + Math.floor(getArea())
+                + " vertexXYZ: "
+                + vertex.toString();
     }
 
     @Override
