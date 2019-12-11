@@ -12,6 +12,7 @@ public class Rectangle extends PlaneShape {
 
     public Rectangle(double width, double height, double x, double y) {
         vertex = new Vertex2D(x, y);
+        getVertex2DList().add(vertex);
         this.width = width;
         this.height = height;
     }
@@ -20,20 +21,20 @@ public class Rectangle extends PlaneShape {
     public String toString() {
         return super.toString()
                 + "perimeter: "
-                + Math.floor(getPerimeter())
+                + Math.floor(calculatePerimeter())
                 + " area: "
-                + Math.floor(getArea())
+                + Math.floor(calculateArea())
                 + " vertexXY: "
                 + vertex.toString();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return getWidth() * getHeight();
     }
 
     @Override
-    public double getPerimeter() {
+    public double calculatePerimeter() {
         return (getHeight() + getWidth() * 2);
     }
 

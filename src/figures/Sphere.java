@@ -10,6 +10,7 @@ public class Sphere extends SpaceShape {
 
     public Sphere(double radius, double x, double y, double z) {
         vertex = new Vertex3D(x, y, z);
+        getVertex3DList().add(vertex);
         this.radius = radius;
     }
 
@@ -17,20 +18,20 @@ public class Sphere extends SpaceShape {
     public String toString() {
         return super.toString()
                 + "volume: "
-                + Math.floor(getVolume())
+                + Math.floor(calculateVolume())
                 + " area: "
-                + Math.floor(getArea())
+                + Math.floor(calculateArea())
                 + " vertexXYZ: "
                 + vertex.toString();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return 4 * Math.PI * Math.pow(getRadius(), 2);
     }
 
     @Override
-    public double getVolume() {
+    public double calculateVolume() {
         return (4 * Math.PI * Math.pow(getRadius(), 3)) / 3;
     }
 

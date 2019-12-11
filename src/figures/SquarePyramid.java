@@ -11,6 +11,7 @@ public class SquarePyramid extends SpaceShape {
 
     public SquarePyramid(double height, double width, double x, double y, double z) {
         vertex = new Vertex3D(x, y, z);
+        getVertex3DList().add(vertex);
         this.height = height;
         this.width = width;
     }
@@ -19,20 +20,20 @@ public class SquarePyramid extends SpaceShape {
     public String toString() {
         return super.toString()
                 + "volume: "
-                + Math.floor(getVolume())
+                + Math.floor(calculateVolume())
                 + " area: "
-                + Math.floor(getArea())
+                + Math.floor(calculateArea())
                 + " vertexXYZ: "
                 + vertex.toString();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return getBaseArea() + getSideArea();
     }
 
     @Override
-    public double getVolume() {
+    public double calculateVolume() {
         return (getBaseArea() * getHeight()) / 3;
     }
 

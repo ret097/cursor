@@ -10,6 +10,7 @@ public class Circle extends PlaneShape {
 
     public Circle(double radius, double x, double y) {
         vertex = new Vertex2D(x, y);
+        getVertex2DList().add(vertex);
         this.radius = radius;
     }
 
@@ -17,20 +18,20 @@ public class Circle extends PlaneShape {
     public String toString() {
         return super.toString()
                 + "perimeter: "
-                + Math.floor(getPerimeter())
+                + Math.floor(calculatePerimeter())
                 + " area: "
-                + Math.floor(getArea())
+                + Math.floor(calculateArea())
                 + " vertexXY: "
                 + vertex.toString();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.pow(radius, 2) * Math.PI;
     }
 
     @Override
-    public double getPerimeter() {
+    public double calculatePerimeter() {
         return 2 * Math.PI * getRadius();
     }
 

@@ -2,5 +2,5 @@ package interfaces;
 
 public interface VolumeMeasurable {
 
-    double getVolume();
+    double calculateVolume();
 }

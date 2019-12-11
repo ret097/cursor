@@ -12,6 +12,7 @@ public class Cuboid extends SpaceShape {
 
     public Cuboid(double width, double height, double depth, double x, double y, double z) {
         vertex = new Vertex3D(x, y, z);
+        getVertex3DList().add(vertex);
         this.width = width;
         this.height = height;
         this.depth = depth;
@@ -21,20 +22,20 @@ public class Cuboid extends SpaceShape {
     public String toString() {
         return super.toString()
                 + "volume: "
-                + Math.floor(getVolume())
+                + Math.floor(calculateVolume())
                 + " area: "
-                + Math.floor(getArea())
+                + Math.floor(calculateArea())
                 + " vertexXYZ: "
                 + vertex.toString();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (getWidth() * getHeight() + getWidth() * getDepth() + getHeight() * getDepth() * 2);
     }
 
     @Override
-    public double getVolume() {
+    public double calculateVolume() {
         return getHeight() * getWidth() * getDepth();
     }
 

@@ -1,6 +1,6 @@
 package vertex;
 
-public class Vertex3D extends Vertex {
+public class Vertex3D {
 
     private double x;
     private double y;

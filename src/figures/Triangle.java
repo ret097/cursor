@@ -12,6 +12,9 @@ public class Triangle extends PlaneShape {
         vertexA = new Vertex2D(x, y);
         vertexB = new Vertex2D(x1, y1);
         vertexC = new Vertex2D(x2, y2);
+        getVertex2DList().add(vertexA);
+        getVertex2DList().add(vertexB);
+        getVertex2DList().add(vertexC);
     }
 
     public double sideA() {
@@ -33,9 +36,9 @@ public class Triangle extends PlaneShape {
     public String toString() {
         return super.toString()
                 + "perimeter: "
-                + Math.floor(getPerimeter())
+                + Math.floor(calculatePerimeter())
                 + " area: "
-                + Math.floor(getArea())
+                + Math.floor(calculateArea())
                 + " vertexXY: "
                 + vertexA.toString()
                 + vertexB.toString()
@@ -43,13 +46,13 @@ public class Triangle extends PlaneShape {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         double p = (sideA() + sideB() + sideC()) / 2;
         return Math.sqrt(p * (p - sideA()) * (p - sideB()) * (p - sideC()));
     }
 
     @Override
-    public double getPerimeter() {
+    public double calculatePerimeter() {
         return sideA() + sideB() + sideC();
     }
 }
