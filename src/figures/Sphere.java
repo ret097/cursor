@@ -1,13 +1,12 @@
 package figures;
 
 import abstraction.SpaceShape;
-import vertex.Vertex;
 import vertex.Vertex3D;
 
 public class Sphere extends SpaceShape {
 
-    Vertex vertex;
-    double radius;
+    private Vertex3D vertex;
+    private double radius;
 
     public Sphere(double radius, double x, double y, double z) {
         vertex = new Vertex3D(x, y, z);

@@ -1,14 +1,13 @@
 package figures;
 
 import abstraction.SpaceShape;
-import vertex.Vertex;
 import vertex.Vertex3D;
 
 public class SquarePyramid extends SpaceShape {
 
-    Vertex vertex;
-    double height;
-    double width;
+    private Vertex3D vertex;
+    private double height;
+    private double width;
 
     public SquarePyramid(double height, double width, double x, double y, double z) {
         vertex = new Vertex3D(x, y, z);
@@ -38,10 +37,10 @@ public class SquarePyramid extends SpaceShape {
     }
 
     public double getSideArea() {
-        return (getPerimeter() * getApophema()) / 2;
+        return (getPerimeter() * getApothem()) / 2;
     }
 
-    public double getApophema() {
+    public double getApothem() {
         return Math.sqrt(Math.pow(getWidth() / 2, 2)
                 + Math.pow(getHeight(), 2));
     }

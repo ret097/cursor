@@ -1,15 +1,14 @@
 package figures;
 
 import abstraction.PlaneShape;
-import vertex.Vertex;
 import vertex.Vertex2D;
 
 public class Rectangle extends PlaneShape {
 
-    Vertex vertex;
+    private Vertex2D vertex;
 
-    double width;
-    double height;
+    private double width;
+    private double height;
 
     public Rectangle(double width, double height, double x, double y) {
         vertex = new Vertex2D(x, y);

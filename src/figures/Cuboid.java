@@ -1,15 +1,14 @@
 package figures;
 
 import abstraction.SpaceShape;
-import vertex.Vertex;
 import vertex.Vertex3D;
 
 public class Cuboid extends SpaceShape {
 
-    Vertex vertex;
-    double width;
-    double height;
-    double depth;
+    private Vertex3D vertex;
+    private double width;
+    private double height;
+    private double depth;
 
     public Cuboid(double width, double height, double depth, double x, double y, double z) {
         vertex = new Vertex3D(x, y, z);
@@ -31,15 +30,15 @@ public class Cuboid extends SpaceShape {
 
     @Override
     public double getArea() {
-        return (getWidght() * getHeight() + getWidght() * getDepth() + getHeight() * getDepth() * 2);
+        return (getWidth() * getHeight() + getWidth() * getDepth() + getHeight() * getDepth() * 2);
     }
 
     @Override
     public double getVolume() {
-        return getHeight() * getWidght() * getDepth();
+        return getHeight() * getWidth() * getDepth();
     }
 
-    public double getWidght() {
+    public double getWidth() {
         return width;
     }
 

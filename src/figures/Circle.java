@@ -5,7 +5,7 @@ import vertex.Vertex2D;
 
 public class Circle extends PlaneShape {
 
-    Vertex2D vertex;
+    private Vertex2D vertex;
     private double radius;
 
     public Circle(double radius, double x, double y) {
