@@ -1,6 +1,6 @@
 package main.java;
 
-public class TList {
+public class ValuesList {
     public void print() {
 
         MyList<Integer> listBag = new MyList<>();
