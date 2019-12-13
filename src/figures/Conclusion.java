@@ -1,6 +1,6 @@
 package figures;
 
-import abstraction.Shape;
+import shapes.Shape;
 
 public class Conclusion {
     public static void main(String[] args) {

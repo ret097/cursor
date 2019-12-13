@@ -1,6 +1,6 @@
 package figures;
 
-import abstraction.PlaneShape;
+import shapes.PlaneShape;
 import vertex.Vertex2D;
 
 public class Circle extends PlaneShape {

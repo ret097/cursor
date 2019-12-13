@@ -1,6 +1,6 @@
 package figures;
 
-import abstraction.SpaceShape;
+import shapes.SpaceShape;
 import vertex.Vertex3D;
 
 public class Cuboid extends SpaceShape {

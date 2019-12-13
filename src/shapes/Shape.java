@@ -1,4 +1,4 @@
-package abstraction;
+package shapes;
 
 import figures.*;
 
