@@ -5,31 +5,31 @@ import java.util.List;
 
 public class MyList<T extends Number> {
 
-    List<T> list = new ArrayList<T>();
+   private List<T> list = new ArrayList<>();
 
     public void add(T something) {
-        list.add(something);
+        getList().add(something);
     }
 
     public List<T> getList() {
-        return list;
+        return this.list;
     }
 
-    public T largest() {
+    public T getLargestValue() {
         T value = getList().get(0);
-        for (int i = 1; i < getList().size(); i++) {
-            if (getList().get(i).doubleValue() > value.doubleValue()) {
-                value = getList().get(i);
+        for (int element = 1; element < getList().size(); element++) {
+            if (getList().get(element).doubleValue() > value.doubleValue()) {
+                value = getList().get(element);
             }
         }
         return value;
     }
 
-    public T smallest() {
+    public T getSmallestValue() {
         T value = getList().get(0);
-        for (int i = 1; i < getList().size(); i++) {
-            if (getList().get(i).doubleValue() < value.doubleValue()) {
-                value = getList().get(i);
+        for (int element = 1; element < getList().size(); element++) {
+            if (getList().get(element).doubleValue() < value.doubleValue()) {
+                value = getList().get(element);
             }
         }
         return value;
