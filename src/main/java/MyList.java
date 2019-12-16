@@ -1,9 +1,10 @@
 package main.java;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class MyList<T extends Number> {
+public class MyList<T extends Number & Comparable<? super T>> {
 
    private List<T> list = new ArrayList<>();
 
@@ -16,22 +17,10 @@ public class MyList<T extends Number> {
     }
 
     public T getLargestValue() {
-        T value = getList().get(0);
-        for (int element = 1; element < getList().size(); element++) {
-            if (getList().get(element).doubleValue() > value.doubleValue()) {
-                value = getList().get(element);
-            }
-        }
-        return value;
+        return Collections.max(list);
     }
 
     public T getSmallestValue() {
-        T value = getList().get(0);
-        for (int element = 1; element < getList().size(); element++) {
-            if (getList().get(element).doubleValue() < value.doubleValue()) {
-                value = getList().get(element);
-            }
-        }
-        return value;
+        return Collections.min(list);
     }
 }
