@@ -2,7 +2,7 @@ package shapes;
 
 import figures.*;
 
-public class Shape {
+public abstract class Shape {
 
     public void print() {
         Circle circle = new Circle(5, 3, 5);
