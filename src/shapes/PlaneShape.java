@@ -14,13 +14,4 @@ public abstract class PlaneShape extends Shape implements PerimeterMeasurable, A
         return vertex2DList;
     }
 
-    @Override
-    public double calculateArea() {
-        return 0;
-    }
-
-    @Override
-    public double calculatePerimeter() {
-        return 0;
-    }
 }
