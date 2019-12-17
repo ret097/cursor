@@ -8,9 +8,12 @@ public class Fruits {
     private List<String> list = new ArrayList<>(Arrays.asList("Orange", "Banana", "Grapefruit", "Apple", "Pineapple"));
 
     public void checkList() {
+        String grapefruit = "Grapefruit";
         String orange = "Orange";
-        int same = list.indexOf(orange);
-        if (list.contains(orange)) list.set(same, "Grapefruit");
+        if (!list.contains(grapefruit)) {
+            int same = list.indexOf(orange);
+            if (list.contains(orange)) list.set(same, grapefruit);
+        }
     }
 
     public void print() {
