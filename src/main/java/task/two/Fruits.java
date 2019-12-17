@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Fruits {
-    List<String> list = new ArrayList<>(Arrays.asList("Orange", "Banana", "Grapefruit", "Apple", "Pineapple"));
+    private List<String> list = new ArrayList<>(Arrays.asList("Orange", "Banana", "Grapefruit", "Apple", "Pineapple"));
 
     public void checkList() {
         String orange = "Orange";

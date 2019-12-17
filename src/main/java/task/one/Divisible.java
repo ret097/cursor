@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Divisible {
-    List<Integer> list = new ArrayList<>(Arrays.asList(3, 9, 11, 18, 20, 22));
+    private List<Integer> list = new ArrayList<>(Arrays.asList(3, 9, 11, 18, 20, 22));
 
     public void remove() {
         for (int start = 0; start < list.size(); start++) {
@@ -17,6 +17,7 @@ public class Divisible {
     }
 
     public void print() {
+        remove();
         System.out.println(list);
     }
 }

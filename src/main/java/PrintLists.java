@@ -11,7 +11,6 @@ public class PrintLists {
         CommonElements commonElements = new CommonElements();
         commonElements.searchForCommonElements();
         fruits.print();
-        divisible.remove();
         divisible.print();
     }
 }
