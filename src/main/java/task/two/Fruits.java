@@ -2,6 +2,7 @@ package main.java.task.two;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Fruits {
@@ -11,8 +12,7 @@ public class Fruits {
         String grapefruit = "Grapefruit";
         String orange = "Orange";
         if (!list.contains(grapefruit)) {
-            int same = list.indexOf(orange);
-            if (list.contains(orange)) list.set(same, grapefruit);
+            if (list.contains(orange)) Collections.replaceAll(list, orange, grapefruit);
         }
     }
 
