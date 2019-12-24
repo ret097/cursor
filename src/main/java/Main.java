@@ -1,8 +1,11 @@
 package main.java;
 
+import main.java.tasks.ListOfTasks;
+
 public class Main {
     public static void main(String[] args) {
-        PrintLists printLists = new PrintLists();
-        printLists.printAll();
+        ListOfTasks listOfTasks=new ListOfTasks();
+        listOfTasks.displayResults();
+
     }
 }
