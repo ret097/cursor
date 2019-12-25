@@ -4,17 +4,17 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Implement {
-    private Map<LocalDate, String> listLibrary = new HashMap<>();
+public class LibraryReport {
+    private Map<LocalDate, String> dateToBookName = new HashMap<>();
 
     public void put(LocalDate date, String book) {
-        listLibrary.put(date, book);
+        dateToBookName.put(date, book);
     }
 
-    public void getDate(LocalDate date) {
-        String same = listLibrary.get(date);
-        if (same != null) {
-            System.out.println(same);
+    public void printBookNameByDate(LocalDate date) {
+        String bookName = dateToBookName.get(date);
+        if (bookName != null) {
+            System.out.println(bookName);
         } else {
             System.out.println("Newer book");
         }
@@ -22,7 +22,7 @@ public class Implement {
 
     public void lookDates() {
         System.out.println("Written dates in the Library");
-        for (LocalDate date : listLibrary.keySet()) {
+        for (LocalDate date : dateToBookName.keySet()) {
             System.out.println(date);
         }
 
@@ -30,7 +30,7 @@ public class Implement {
 
     public void lookBookNames() {
         System.out.println("Written book names in the Library");
-        for (String name : listLibrary.values()) {
+        for (String name : dateToBookName.values()) {
             System.out.println(name);
         }
     }
