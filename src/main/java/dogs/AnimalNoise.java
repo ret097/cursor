@@ -1,6 +1,6 @@
 package main.java.dogs;
 
 @FunctionalInterface
-public interface AnimalNoises {
+public interface AnimalNoise {
     void makeNoise(String noise);
 }

@@ -3,7 +3,7 @@ package main.java.dogs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PackOfDogs {
+public class Pack {
     private List<Dog> pack = new ArrayList<>();
 
     public void addToPack() {

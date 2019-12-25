@@ -1,12 +1,12 @@
 package main.java.tasks;
 
-import main.java.dogs.PackOfDogs;
+import main.java.dogs.Pack;
 import main.java.movies.MovieList;
 import main.java.users.Filter;
 
-public class ListOfTasks {
+public class TaskList {
     public void displayResults(){
-        PackOfDogs packOfDogs=new PackOfDogs();
+        Pack packOfDogs=new Pack();
         packOfDogs.sayWoof();
         Filter filter = new Filter();
         filter.sortUsers();

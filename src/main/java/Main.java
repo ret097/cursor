@@ -1,11 +1,11 @@
 package main.java;
 
-import main.java.tasks.ListOfTasks;
+import main.java.tasks.TaskList;
 
 public class Main {
     public static void main(String[] args) {
-        ListOfTasks listOfTasks=new ListOfTasks();
-        listOfTasks.displayResults();
+        TaskList taskList =new TaskList();
+        taskList.displayResults();
 
     }
 }
